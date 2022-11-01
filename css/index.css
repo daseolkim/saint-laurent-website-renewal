@@ -1159,6 +1159,7 @@ transition: 0.6s;
     text-align: center;
     line-height: 40px;
     left: 18%;
+    top: 100%;
 }
 .best .slide-content .desc p{font-size: 10px;}
 .best img{width: 90%;}

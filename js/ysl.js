@@ -242,9 +242,8 @@ $("document").ready(function(){
                 draggable: true,
                 // fade: true,
                 infinity: true,
-                // asNavFor: '.lookbook-content-wrap.two'
             });
-            $('.lookbook-content-wrap.two').slick({
+            $('.lookbook-right-content-wrap').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
                 asNavFor: '.lookbook-content-wrap.one',
