@@ -1,4 +1,12 @@
 $("document").ready(function(){
+        
+
+    $('.lookbook .right').slick({
+        asNavFor: '.lookbook .left .content-list'
+    });
+    $('.lookbook .left .content-list').slick({
+        asNavFor: '.lookbook .right'
+    });
 
 
     $(".main-slide-wrapper").slick({
@@ -27,7 +35,13 @@ $("document").ready(function(){
             $("#fp-nav ul li .fp-tooltip").eq(0).addClass("on")
         }
         // 구역을 불러들이고 나서 스크롤이 끝나면 이벤트가 실행
+        if(destination.index == 1){
+            $(".section").find('[data-aos]').addClass("aos-animate")
         }
+        // 구역을 불러들이고 나서 스크롤이 끝나면 이벤트가 실행
+        },
+    
+    afterRender: AOS.init()
     })
 
 
@@ -96,30 +110,52 @@ $("document").ready(function(){
         ]
     });
 
-    $(".FORWOMEN-menu ul li:nth-child(1)").click(function(){
-        $(".shoes").addClass("on")
+
+
+    $(".FORWOMEN-menu ul li").click(function(){
+        let i = $(this).index();
+        $(".men-content").removeClass("on").eq(i).addClass("on")
+        $('.men-content-wrap').slick('setPosition');
     })
-    $(".FORWOMEN-menu ul li:not(:nth-child(1))").click(function(){
-        $(".shoes").removeClass("on")
-    })
-    $(".FORWOMEN-menu ul li:nth-child(2)").click(function(){
-        $(".bag").addClass("on")
-    })
-    $(".FORWOMEN-menu ul li:not(:nth-child(2))").click(function(){
-        $(".bag").removeClass("on")
-    })
-    $(".FORWOMEN-menu ul li:nth-child(3)").click(function(){
-        $(".acc").addClass("on")
-    })
-    $(".FORWOMEN-menu ul li:not(:nth-child(3))").click(function(){
-        $(".acc").removeClass("on")
-    })
-    $(".FORWOMEN-menu ul li:nth-child(4)").click(function(){
-        $(".sun").addClass("on")
-    })
-    $(".FORWOMEN-menu ul li:not(:nth-child(4))").click(function(){
-        $(".sun").removeClass("on")
-    });
+
+
+
+    
+    $(".FORWOMEN-menu ul li:nth-child(1) a::after").addClass("on")
+
+        $(".FORWOMEN-menu ul li").click(function(){
+            i = $(this).index();
+            $(".FORWOMEN-menu ul li").removeClass("on").eq(i).addClass("on")
+            $(".women-content").removeClass("on").eq(i).addClass("on")
+            $('.women-content-wrap').slick('setPosition');
+
+        })
+
+    // $(".FORWOMEN-menu ul li:nth-child(1)").click(function(){
+    //     $(".shoes").addClass("on")
+    //    
+    // })
+    // $(".FORWOMEN-menu ul li:not(:nth-child(1))").click(function(){
+    //     $(".shoes").removeClass("on")
+    // })
+    // $(".FORWOMEN-menu ul li:nth-child(2)").click(function(){
+    //     $(".bag").addClass("on")
+    // })
+    // $(".FORWOMEN-menu ul li:not(:nth-child(2))").click(function(){
+    //     $(".bag").removeClass("on")
+    // })
+    // $(".FORWOMEN-menu ul li:nth-child(3)").click(function(){
+    //     $(".acc").addClass("on")
+    // })
+    // $(".FORWOMEN-menu ul li:not(:nth-child(3))").click(function(){
+    //     $(".acc").removeClass("on")
+    // })
+    // $(".FORWOMEN-menu ul li:nth-child(4)").click(function(){
+    //     $(".sun").addClass("on")
+    // })
+    // $(".FORWOMEN-menu ul li:not(:nth-child(4))").click(function(){
+    //     $(".sun").removeClass("on")
+    // });
 
 
 
@@ -152,59 +188,70 @@ $("document").ready(function(){
             }
             ]
         });
+        $(".FORMEN-menu ul li").click(function(){
+            let i = $(this).index();
+            $(".men-content").removeClass("on").eq(i).addClass("on")
+            $('.men-content-wrap').slick('setPosition');
+            
+        })
+
+    
+        $(".FORMEN-menu ul li:nth-child(1) a::after").addClass("on")
+
+        $(".FORMEN-menu ul li").click(function(){
+            i = $(this).index();
+            $(".FORMEN-menu ul li").removeClass("on").eq(i).addClass("on")
+            $(".men-content").removeClass("on").eq(i).addClass("on")
+            $('.men-content-wrap').slick('setPosition');
+        })
 
 
 
-
-        $(".FORMEN-menu ul li:nth-child(1)").click(function(){
-            $(".shoes").addClass("on")
-        })
-        $(".FORMEN-menu ul li:not(:nth-child(1))").click(function(){
-            $(".shoes").removeClass("on")
-        })
-        $(".FORMEN-menu ul li:nth-child(2)").click(function(){
-            $(".bag").addClass("on")
-        })
-        $(".FORMEN-menu ul li:not(:nth-child(2))").click(function(){
-            $(".bag").removeClass("on")
-        })
-        $(".FORMEN-menu ul li:nth-child(3)").click(function(){
-            $(".belts").addClass("on")
-        })
-        $(".FORMEN-menu ul li:not(:nth-child(3))").click(function(){
-            $(".belts").removeClass("on")
-        })
-        $(".FORMEN-menu ul li:nth-child(4)").click(function(){
-            $(".sun").addClass("on")
-        })
-        $(".FORMEN-menu ul li:not(:nth-child(4))").click(function(){
-            $(".sun").removeClass("on")
-        });
+        // $(".FORMEN-menu ul li:nth-child(1)").click(function(){
+        //     $(".shoes").addClass("on")
+        // })
+        // $(".FORMEN-menu ul li:not(:nth-child(1))").click(function(){
+        //     $(".shoes").removeClass("on")
+        // })
+        // $(".FORMEN-menu ul li:nth-child(2)").click(function(){
+        //     $(".bag").addClass("on")
+        // })
+        // $(".FORMEN-menu ul li:not(:nth-child(2))").click(function(){
+        //     $(".bag").removeClass("on")
+        // })
+        // $(".FORMEN-menu ul li:nth-child(3)").click(function(){
+        //     $(".belts").addClass("on")
+        // })
+        // $(".FORMEN-menu ul li:not(:nth-child(3))").click(function(){
+        //     $(".belts").removeClass("on")
+        // })
+        // $(".FORMEN-menu ul li:nth-child(4)").click(function(){
+        //     $(".sun").addClass("on")
+        // })
+        // $(".FORMEN-menu ul li:not(:nth-child(4))").click(function(){
+        //     $(".sun").removeClass("on")
+        // });
         
-        
-
-
 
 
         
             $('.lookbook-left-slide-wrap').slick({
                 slidesToShow: 1,
                 slidesToScroll: 1,
-                // arrows: true,
                 dots: true,
                 draggable: true,
                 // fade: true,
                 infinity: true,
                 // asNavFor: '.lookbook-content-wrap.two'
             });
-            // $('.lookbook-content-wrap.two').slick({
-            //     slidesToShow: 1,
-            //     slidesToScroll: 1,
-            //     asNavFor: '.lookbook-content-wrap.one',
-            //     // centerMode: true,
-            //     infinity: true,
-            //     // focusOnSelect: true
-            // });
+            $('.lookbook-content-wrap.two').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                asNavFor: '.lookbook-content-wrap.one',
+                // centerMode: true,
+                infinity: true,
+                // focusOnSelect: true
+            });
 
 
 

@@ -21,7 +21,6 @@
 {
     font-size: 0;
     line-height: 0;
-
     position: absolute;
     top: 50%;
 
@@ -56,6 +55,7 @@
 .slick-next:focus:before
 {
     opacity: 1;
+    display: none;
 }
 .slick-prev.slick-disabled:before,
 .slick-next.slick-disabled:before
@@ -86,14 +86,7 @@
     right: -25px;
     left: auto;
 }
-.slick-prev:before
-{
-    content: '←';
-}
-[dir='rtl'] .slick-prev:before
-{
-    content: '→';
-}
+
 
 .slick-next
 {
@@ -103,14 +96,6 @@
 {
     right: auto;
     left: -25px;
-}
-.slick-next:before
-{
-    content: '→';
-}
-[dir='rtl'] .slick-next:before
-{
-    content: '←';
 }
 
 /* Dots */
